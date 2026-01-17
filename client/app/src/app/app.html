@@ -1,30 +1,31 @@
 <div class="relative min-h-screen bg-[#0b0b14] overflow-hidden">
+  <!-- Gradient background -->
   <div
     class="pointer-events-none absolute -top-150 left-1/2 -translate-x-1/2 w-350 h-350 rounded-full bg-[radial-gradient(circle_at_center,#D17B1D,#8D1CBD_40%,transparent_70%)] blur-3xl opacity-70 z-0"
   ></div>
-  <div class="flex w-full justify-center">
-    <div class="relative z-10 flex flex-col p-8 w-[80%] justify-center">
-      <section
-        class="flex gap-6 border p-3 bg-[#000000a2] rounded-4xl w-full items-center hover:bg-[#000000] transition duration-500 ease-in-out hover:border-[#8d1cbd99]"
-      >
-        <div>
-          <img
-            src="images/1766263061118.jpg"
-            alt="profile picture"
-            class="w-32 h-32 rounded-full"
-          />
-        </div>
 
-        <div class="flex flex-col text-white w-[70%]">
-          <span class="text-3xl font-bold">João Pedro Ramos Dos Santos</span>
-          <span class="text-md text-gray-400 mt-1">Desenvolvedor Web</span>
+  <div class="flex w-full justify-center">
+    <div class="relative z-10 flex flex-col w-full max-w-7xl px-4 sm:px-8 py-6">
+      <!-- HEADER -->
+      <section
+        class="flex flex-col sm:flex-row gap-6 border p-4 bg-[#000000a2] rounded-4xl w-full items-center hover:bg-[#000000] transition duration-500 ease-in-out hover:border-[#8d1cbd99]"
+      >
+        <img
+          src="images/1766263061118.jpg"
+          alt="profile picture"
+          class="w-24 h-24 sm:w-32 sm:h-32 rounded-full"
+        />
+
+        <div class="flex flex-col text-white w-full sm:w-[70%] text-center sm:text-left">
+          <span class="text-2xl sm:text-3xl font-bold"> João Pedro Ramos Dos Santos </span>
+          <span class="text-sm sm:text-md text-gray-400 mt-1"> Desenvolvedor Web </span>
 
           <span class="text-sm text-gray-400 mt-1">
             <fa-icon [icon]="faLocationDot"></fa-icon>
             Ivaiporã, Paraná
           </span>
 
-          <span class="text-sm text-gray-400 mt-1">
+          <span class="text-sm text-gray-400 mt-1 break-all">
             <fa-icon [icon]="faEnvelope"></fa-icon>
             joaoprsantos1@outlook.com
           </span>
@@ -34,188 +35,131 @@
           <a href="https://github.com/devjoaopr">
             <fa-icon
               [icon]="faGithub"
-              class="text-white text-5xl hover:text-gray-300 transition"
+              class="text-white text-4xl sm:text-5xl hover:text-gray-300 transition"
             ></fa-icon>
           </a>
 
           <a href="https://www.linkedin.com/in/devjoaopr/">
             <fa-icon
               [icon]="faLinkedin"
-              class="text-white text-5xl hover:text-gray-300 transition"
+              class="text-white text-4xl sm:text-5xl hover:text-gray-300 transition"
             ></fa-icon>
           </a>
         </div>
       </section>
 
-      <section>
-        <div class="grid grid-cols-3 gap-2 mt-[5vh]">
+      <!-- CONTENT -->
+      <section class="mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- RESUMO -->
           <div
-            class="h-[70vh] rounded-4xl bg-[#000000a2] p-4 border border-[#232336] flex flex-col shadow-lg shadow-[#232336] gap-4 hover:bg-[#000000] transition duration-500 ease-in-out hover:border-[#8d1cbd99]"
+            class="h-auto md:min-h-[70vh] rounded-4xl bg-[#000000a2] p-4 border border-[#232336] flex flex-col gap-4 hover:bg-[#000000] transition duration-500 ease-in-out hover:border-[#8d1cbd99]"
           >
-            <span class="text-2xl font-bold text-white"
-              >Resumo
-              <fa-icon [icon]="faUser" class="text-white hover:text-gray-300 transition"></fa-icon>
+            <span class="text-xl sm:text-2xl font-bold text-white">
+              Resumo
+              <fa-icon [icon]="faUser"></fa-icon>
             </span>
+
             <div>
-              <h2 class="text-xl text-white mb-2">Sobre mim</h2>
-              <p class="text-gray-400">
+              <h2 class="text-lg sm:text-xl text-white mb-2">Sobre mim</h2>
+              <p class="text-gray-400 text-sm sm:text-base">
                 Sou um desenvolvedor Junior iniciando no mercado de desenvolvimento Web, atualmente
                 cursando Analise e Desenvolvimento de Sistemas.
               </p>
-              <h2 class="text-xl text-white mb-2">Educação</h2>
 
-              <h3 class="text-md text-white mb-2">- Ensino Superior</h3>
-              <span class="text-gray-400"
-                >Cursando Analise e Desenvolvimento de Sistemas na UNIVALE(Faculdades Integradas do
-                Vale do Ivai).</span
-              >
-              <h2 class="text-xl text-white mt-2">Projetos Pessoais</h2>
-              <span class="text-gray-400"
-                >Desenvolvimento de uma API para enviar e receber mensagens através de
-                WebSocket.</span
-              >
+              <h2 class="text-lg sm:text-xl text-white mt-4 mb-2">Educação</h2>
+              <h3 class="text-sm sm:text-md text-white mb-1">- Ensino Superior</h3>
+              <p class="text-gray-400 text-sm">
+                Cursando Analise e Desenvolvimento de Sistemas na UNIVALE (Faculdades Integradas do
+                Vale do Ivai).
+              </p>
+
+              <h2 class="text-lg sm:text-xl text-white mt-4 mb-2">Projetos Pessoais</h2>
+              <p class="text-gray-400 text-sm">
+                Desenvolvimento de uma API para enviar e receber mensagens através de WebSocket.
+              </p>
               <a
                 href="https://github.com/devjoaopr/CHATAPI"
-                class="text-blue-300 underline hover:text-blue-400 transition duration-300 ease-in-out"
-                >Repositório</a
+                class="text-blue-300 underline hover:text-blue-400 transition"
               >
+                Repositório
+              </a>
             </div>
           </div>
+
+          <!-- STACKS -->
           <div
-            class="h-[70vh] rounded-4xl bg-[#000000a2] p-4 border border-[#232336] flex flex-col shadow-lg shadow-[#232336] gap-4 hover:bg-[#000000] transition duration-500 ease-in-out hover:border-[#8d1cbd99]"
+            class="h-auto md:min-h-[70vh] rounded-4xl bg-[#000000a2] p-4 border border-[#232336] flex flex-col gap-4 hover:bg-[#000000] transition duration-500 ease-in-out hover:border-[#8d1cbd99]"
           >
-            <span class="text-2xl font-bold text-white"
-              >Stacks
-              <fa-icon [icon]="faCode" class="text-white hover:text-gray-300 transition"></fa-icon
-            ></span>
+            <span class="text-xl sm:text-2xl font-bold text-white">
+              Stacks <fa-icon [icon]="faCode"></fa-icon>
+            </span>
 
             <div>
-              <h2 class="text-xl text-white mb-2">Linguagens</h2>
-              <div class="flex gap-2 flex-wrap">
-                <span
-                  class="inline-block p-1 bg-linear-to-r from-[#3776AB] to-[#FFD43B] rounded-3xl text-center text-sm cursor-default hover:scale-105 duration-150 ease-in-out"
+              <h2 class="text-lg sm:text-xl text-white mb-2">Linguagens</h2>
+              <div class="flex flex-wrap gap-2 text-sm">
+                <span class="p-1 rounded-3xl bg-linear-to-r from-[#3776AB] to-[#FFD43B]"
+                  >Python</span
                 >
-                  Python
-                </span>
-                <span
-                  class="bg-[#3178C6] inline-block p-1 rounded-3xl text-sm cursor-default hover:scale-105 duration-150 ease-in-out"
-                >
-                  TypeScript
-                </span>
-                <span
-                  class="bg-[#F7DF1E] inline-block p-1 rounded-3xl text-sm cursor-default hover:scale-105 duration-150 ease-in-out"
-                >
-                  JavaScript
-                </span>
-                <span
-                  class="bg-[#E34F26] inline-block p-1 rounded-3xl text-sm cursor-default hover:scale-105 duration-150 ease-in-out"
-                >
-                  HTML</span
-                >
-                <span
-                  class="bg-[#1572B6] inline-block p-1 rounded-3xl text-sm cursor-default hover:scale-105 duration-150 ease-in-out"
-                >
-                  CSS</span
-                >
+                <span class="p-1 rounded-3xl bg-[#3178C6]">TypeScript</span>
+                <span class="p-1 rounded-3xl bg-[#F7DF1E] text-black">JavaScript</span>
+                <span class="p-1 rounded-3xl bg-[#E34F26]">HTML</span>
+                <span class="p-1 rounded-3xl bg-[#1572B6]">CSS</span>
               </div>
             </div>
 
             <div>
-              <h2 class="text-xl text-white mb-2">FrameWorks</h2>
-              <div class="flex gap-2 flex-wrap">
-                <span
-                  class="inline-block p-1 bg-[#0000008a] rounded-3xl text-center text-sm cursor-default border border-[#ffffff75] hover:scale-105 duration-150 ease-in-out text-white"
-                >
-                  Flask
-                </span>
-                <span
-                  class="bg-[#c3002eb7] inline-block p-1 rounded-3xl text-sm cursor-default hover:scale-105 duration-150 ease-in-out"
-                >
-                  Angular
-                </span>
+              <h2 class="text-lg sm:text-xl text-white mb-2">Frameworks</h2>
+              <div class="flex flex-wrap gap-2 text-sm">
+                <span class="p-1 rounded-3xl border border-white text-white">Flask</span>
+                <span class="p-1 rounded-3xl bg-[#c3002eb7]">Angular</span>
+                <span class="p-1 rounded-3xl bg-[#38bff8b2]">TailwindCSS</span>
+              </div>
+            </div>
 
-                <span
-                  class="bg-[#38bff8b2] inline-block p-1 rounded-3xl text-sm cursor-default hover:scale-105 duration-150 ease-in-out"
-                >
-                  TailwindCSS</span
-                >
+            <div>
+              <h2 class="text-lg sm:text-xl text-white mb-2">Banco de Dados</h2>
+              <div class="flex flex-wrap gap-2 text-sm">
+                <span class="p-1 rounded-3xl bg-[#2F5D8A]">PostgreSQL</span>
+                <span class="p-1 rounded-3xl bg-[#4B5563]">Alembic</span>
               </div>
             </div>
+
             <div>
-              <h2 class="text-xl text-white mb-2">Banco de Dados</h2>
-              <div class="flex gap-2 flex-wrap">
-                <span
-                  class="inline-block p-1 bg-[#2F5D8A] rounded-3xl text-center text-sm cursor-default hover:scale-105 duration-150 ease-in-out text-white"
-                >
-                  PostgreSQL
-                </span>
-                <span
-                  class="inline-block p-1 bg-[#4B5563] rounded-3xl text-center text-sm cursor-default hover:scale-105 duration-150 ease-in-out text-white"
-                >
-                  Alembic
-                </span>
-              </div>
-            </div>
-            <div>
-              <h2 class="text-xl text-white mb-2">DevOps</h2>
-              <div class="flex gap-2 flex-wrap">
-                <span
-                  class="inline-block p-1 bg-[#2496ED] rounded-3xl text-center text-sm cursor-default hover:scale-105 duration-150 ease-in-out text-white"
-                >
-                  Docker
-                </span>
+              <h2 class="text-lg sm:text-xl text-white mb-2">DevOps</h2>
+              <div class="flex flex-wrap gap-2 text-sm">
+                <span class="p-1 rounded-3xl bg-[#2496ED]">Docker</span>
               </div>
             </div>
           </div>
 
+          <!-- EXPERIÊNCIA -->
           <div
-            class="h-[70vh] rounded-4xl bg-[#000000a2] p-4 border border-[#232336] flex flex-col shadow-lg shadow-[#232336] gap-4 hover:bg-[#000000] transition duration-500 ease-in-out"
+            class="h-auto md:min-h-[70vh] rounded-4xl bg-[#000000a2] p-4 border border-[#232336] flex flex-col gap-4 hover:bg-[#000000] transition duration-500 ease-in-out"
           >
-            <span class="text-2xl font-bold text-white">
+            <span class="text-xl sm:text-2xl font-bold text-white">
               Experiência <fa-icon [icon]="faBriefCase"></fa-icon>
             </span>
 
             <div class="flex gap-4 mt-2">
-              <div class="flex flex-col items-center gap-2">
+              <div class="flex flex-col items-center">
                 <div class="w-2 h-2 rounded-full bg-[#8d1cbd99]"></div>
-                <div class="w-0.5 h-24 bg-[#8d1cbd99] rounded-full"></div>
+                <div class="w-0.5 h-24 bg-[#8d1cbd99]"></div>
               </div>
-              <div class="flex flex-col text-white text-sm">
+
+              <div class="flex flex-col text-sm text-white">
                 <span class="font-medium">ADVOCACIA BICHARA</span>
-                <span class="font-medium">Desenvolvedor Web Junior</span>
+                <span>Desenvolvedor Web Junior</span>
                 <span class="text-gray-400 text-xs">2025/10 — Atual</span>
-                <span class="text-gray-400 text-md mt-2">Stacks</span>
-                <div class="flex flex-row flex-wrap gap-2 text-wrap w-full mt-2">
-                  <span
-                    class="text-gray-400 text-xs hover:scale-105 duration-150 ease-in-out cursor-default hover:text-white"
-                  >
-                    Docker
-                  </span>
-                  <span
-                    class="text-gray-400 text-xs hover:scale-105 duration-150 ease-in-out cursor-default hover:text-white"
-                  >
-                    Flask
-                  </span>
-                  <span
-                    class="text-gray-400 text-xs hover:scale-105 duration-150 ease-in-out cursor-default hover:text-white"
-                  >
-                    Postgresql
-                  </span>
-                  <span
-                    class="text-gray-400 text-xs hover:scale-105 duration-150 ease-in-out cursor-default hover:text-white"
-                  >
-                    Alembic
-                  </span>
-                  <span
-                    class="text-gray-400 text-xs hover:scale-105 duration-150 ease-in-out cursor-default hover:text-white"
-                  >
-                    Tailwindcss
-                  </span>
-                  <span
-                    class="text-gray-400 text-xs hover:scale-105 duration-150 ease-in-out cursor-default hover:text-white"
-                  >
-                    Angular
-                  </span>
+
+                <span class="text-gray-400 mt-2">Stacks</span>
+                <div class="flex flex-wrap gap-2 mt-1 text-xs text-gray-400">
+                  <span>Docker</span>
+                  <span>Flask</span>
+                  <span>PostgreSQL</span>
+                  <span>Alembic</span>
+                  <span>TailwindCSS</span>
+                  <span>Angular</span>
                 </div>
               </div>
             </div>
